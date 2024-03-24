@@ -27,6 +27,12 @@ importers:
         specifier: ^13.8.2
         version: 13.8.2(react-native@0.73.6)(react@18.2.0)
 
+  packages/web:
+    devDependencies:
+      comlink:
+        specifier: ^4.4.1
+        version: 4.4.1
+
 packages:
 
   /@ampproject/remapping@2.3.0:
