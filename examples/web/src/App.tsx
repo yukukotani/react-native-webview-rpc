@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { wrap } from "@react-native-webview-rpc/web";
+import "./App.css";
+import type { WebViewRpcs } from "../../native/App";
+import { useState } from "react";
+
+const rpc = wrap<WebViewRpcs>();
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [result, setResult] = useState<"ok" | "cancel">();
+
+  const onClickButton = async () => {
+    const res = await rpc.confirmAlert(
+      "Alert from WebView",
+      "This is fired from WebView and rendered in native"
+    );
+    setResult(res);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>This is rendered in WebView</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <button onClick={onClickButton}>Show native alert through RPC</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <span>Result: {result}</span>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
