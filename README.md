@@ -25,7 +25,7 @@ npm install comlink # peer dependencies
 First, you need to define functions that you want to expose to the WebView. You should also export the type of functions that will be imported from the web side later.
 
 ```tsx
-// App.tsx
+// rpcs.tsx
 import { Alert } from "react-native";
 const rpcs = {
   async alert(title: string, body: string) {
@@ -43,6 +43,8 @@ Then, create a message handler by `useWebViewRpcHandler` and pass it to WebView 
 import { useRef } from "react";
 import WebView from "react-native-webview";
 import { useWebViewRpcHandler } from "@react-native-webview-rpc/native";
+import { rpcs } from "./rpcs";
+
 export default function App() {
   const ref = useRef<WebView>(null);
   const onMessage = useWebViewRpcHandler(ref, rpcs);
@@ -62,12 +64,13 @@ export default function App() {
 Import the type of native functions that is exported from the native side.
 
 ```tsx
-import type { WebViewRpcs } from "../native/App";
+import type { WebViewRpcs } from "../native/rpcs";
 ```
 
 Then, call `wrap` to create a proxy object that can call native functions.
 
 ```tsx
+import { wrap } from '@react-native-webview-rpc/web';
 const rpcs = wrap<WebViewRpcs>();
 ```
 
