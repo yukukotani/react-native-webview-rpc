@@ -1,7 +1,7 @@
 {
-  "name": "example-native",
+  "name": "@react-native-webview-rpc/example-native",
   "version": "1.0.0",
-  "main": "./index.js",
+  "main": "./index.ts",
   "private": true,
   "scripts": {
     "start": "expo start",
@@ -10,6 +10,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-webview-rpc/native": "workspace:*",
     "expo": "~50.0.14",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
@@ -17,6 +18,8 @@
     "react-native-webview": "^13.8.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.2.45",
+    "typescript": "^5.1.3"
   }
 }

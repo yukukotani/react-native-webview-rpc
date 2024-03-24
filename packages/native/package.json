@@ -1,12 +1,13 @@
 {
   "name": "@react-native-webview-rpc/native",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup ./src"
+    "build": "tsup ./src",
+    "prepublish": "pnpm build"
   },
   "keywords": [],
   "author": "",

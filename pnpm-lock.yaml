@@ -42,6 +42,12 @@ importers:
       '@babel/core':
         specifier: ^7.20.0
         version: 7.24.3
+      '@types/react':
+        specifier: ~18.2.45
+        version: 18.2.69
+      typescript:
+        specifier: ^5.1.3
+        version: 5.4.3
 
   examples/web:
     dependencies:
