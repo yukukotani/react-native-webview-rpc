@@ -1,5 +1,5 @@
 {
-  "name": "react-native-webview-rpc",
+  "name": "@react-native-webview-rpc/native",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/react": "^18.2.69",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.3"
+    "comlink": "^4.4.1",
+    "react-native-webview": "^13.8.2"
+  },
+  "peerDependencies": {
+    "comlink": ">=4",
+    "react-native-webview": "^>=13"
   }
 }
