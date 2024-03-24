@@ -77,11 +77,11 @@ Now you can call native functions from the web side.
 rpcs.alert("Hello", "World");
 ```
 
-### Example
+## Example
 
 You can find the full example in the `examples` directory.
 
-### Related projects
+## Related projects
 
 - [rn-webview-rpc](https://github.com/ronhe/rn-webview-rpc): The great prior art, but is built for old things (e.g. class component, JavaScriptCore, etc.)
 - [react-native-webview](https://github.com/react-native-webview/react-native-webview): React Native WebView RPC is built on top of React Native WebView's messaging system.
