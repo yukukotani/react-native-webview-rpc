@@ -19,8 +19,8 @@
     "react-native-webview": "^13.8.2"
   },
   "peerDependencies": {
-    "comlink": ">=4",
-    "react": ">=18",
-    "react-native-webview": "^>=13"
+    "comlink": ">=4.0.0",
+    "react": ">=18.0.0",
+    "react-native-webview": "^>=13.0.0"
   }
 }
