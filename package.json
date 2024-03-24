@@ -1,15 +1,13 @@
 {
   "name": "react-native-webview-rpc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.3",
+  "description": "A type-safe RPC between React Native function and JavaScript inside WebView, powered by Comlink",
   "private": true,
   "scripts": {
     "build": "pnpm --filter '@react-native-webview-rpc/*' build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Yuku Kotani (yukukotani@gmail.com)",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@microsoft/api-extractor": "^7.43.0",
     "prettier": "^3.2.5",
