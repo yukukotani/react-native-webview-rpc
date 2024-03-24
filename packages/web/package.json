@@ -1,6 +1,6 @@
 {
   "name": "@react-native-webview-rpc/web",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "A type-safe RPC between React Native function and JavaScript inside WebView, powered by Comlink",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

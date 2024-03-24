@@ -10,7 +10,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@react-native-webview-rpc/native": "^0.1.3",
+    "@react-native-webview-rpc/native": "^0.2.0",
     "expo": "~50.0.14",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
