@@ -74,12 +74,15 @@ const rpcs = wrap<WebViewRpcs>();
 Now you can call native functions from the web side.
 
 ```tsx
-rpcs.alert("Hello", "World");
+const result = await rpcs.alert("Hello", "World");
 ```
 
 ## Example
 
 You can find the full example in the `examples` directory.
+
+![CleanShot 2024-03-25 at 00 37 01](https://github.com/yukukotani/react-native-webview-rpc/assets/16265411/1290ab39-0807-40c4-b0d0-153d52f9a512)
+
 
 ## Related projects
 
