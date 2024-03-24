@@ -2,7 +2,7 @@ import * as Comlink from "comlink";
 import { RefObject } from "react";
 import WebView, { WebViewMessageEvent } from "react-native-webview";
 
-export const IGNORE_RESPONSE_ERROR_SYMBOL = Symbol();
+export const SYMBOL_IGNORING_RPC_RESPONSE_ERROR = Symbol();
 
 export type WebViewEndpoint = Comlink.Endpoint & {
   /**
@@ -12,7 +12,7 @@ export type WebViewEndpoint = Comlink.Endpoint & {
 };
 
 /**
- * Comlink が WebView とメッセージングするための実装
+ * An endpoint of communicating with WebView
  */
 export function createWebViewRpcEndpoint(
   ref: RefObject<WebView>
@@ -37,7 +37,10 @@ export function createWebViewRpcEndpoint(
     },
     postMessage: (data) => {
       if (!ref.current) {
-        if ("value" in data && data.value === IGNORE_RESPONSE_ERROR_SYMBOL) {
+        if (
+          "value" in data &&
+          data.value === SYMBOL_IGNORING_RPC_RESPONSE_ERROR
+        ) {
           return;
         }
         throw Error(`No WebView instance`);
