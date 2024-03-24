@@ -20,6 +20,9 @@ importers:
 
   examples/native:
     dependencies:
+      '@react-native-webview-rpc/native':
+        specifier: workspace:*
+        version: link:../../packages/native
       expo:
         specifier: ~50.0.14
         version: 50.0.14(@babel/core@7.24.3)(@react-native/babel-preset@0.73.21(@babel/core@7.24.3)(@babel/preset-env@7.24.3(@babel/core@7.24.3)))
