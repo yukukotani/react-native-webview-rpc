@@ -32,6 +32,9 @@ importers:
       react-native:
         specifier: 0.73.6
         version: 0.73.6(@babel/core@7.24.3)(@babel/preset-env@7.24.3(@babel/core@7.24.3))(react@18.2.0)
+      react-native-webview:
+        specifier: ^13.8.2
+        version: 13.8.2(react-native@0.73.6(@babel/core@7.24.3)(@babel/preset-env@7.24.3(@babel/core@7.24.3))(react@18.2.0))(react@18.2.0)
     devDependencies:
       '@babel/core':
         specifier: ^7.20.0
