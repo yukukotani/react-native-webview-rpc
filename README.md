@@ -61,16 +61,11 @@ export default function App() {
 
 ### Web side
 
-Import the type of native functions that is exported from the native side.
+Import the type of native functions that is exported from the native side. Then, call `wrap` to create a proxy object that can call native functions.
 
 ```tsx
 import type { WebViewRpcs } from "../native/rpcs";
-```
-
-Then, call `wrap` to create a proxy object that can call native functions.
-
-```tsx
-import { wrap } from '@react-native-webview-rpc/web';
+import { wrap } from "@react-native-webview-rpc/web";
 const rpcs = wrap<WebViewRpcs>();
 ```
 
@@ -86,6 +81,22 @@ You can find the full example in the `examples` directory.
 
 ![CleanShot 2024-03-25 at 00 37 01](https://github.com/yukukotani/react-native-webview-rpc/assets/16265411/1290ab39-0807-40c4-b0d0-153d52f9a512)
 
+## FAQ
+
+### `Failed to return RPC response to WebView via postMessage`
+
+In some cases, like when the RPC closes the WebView, it's expected that the RPC cannot return the response to the WebView since it's already closed. In this case, you can ignore the error by returning `SYMBOL_IGNORING_RPC_RESPONSE_ERROR` from the RPC.
+
+```tsx
+import { SYMBOL_IGNORING_RPC_RESPONSE_ERROR } from "@react-native-webview-rpc/native";
+
+const rpcs = {
+  async closeWebView() {
+    router.dismiss();
+    return SYMBOL_IGNORING_RPC_RESPONSE_ERROR;
+  },
+};
+```
 
 ## Related projects
 
