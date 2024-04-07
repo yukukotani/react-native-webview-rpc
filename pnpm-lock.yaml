@@ -24,8 +24,8 @@ importers:
   examples/native:
     dependencies:
       '@react-native-webview-rpc/native':
-        specifier: ^0.1.3
-        version: 0.1.3(comlink@4.4.1)(react-native-webview@13.8.2(react-native@0.73.6(@babel/core@7.24.3)(@babel/preset-env@7.24.3(@babel/core@7.24.3))(react@18.2.0))(react@18.2.0))(react@18.2.0)
+        specifier: workspace:*
+        version: link:../../packages/native
       expo:
         specifier: ~50.0.14
         version: 50.0.14(@babel/core@7.24.3)(@react-native/babel-preset@0.73.21(@babel/core@7.24.3)(@babel/preset-env@7.24.3(@babel/core@7.24.3)))
@@ -55,8 +55,8 @@ importers:
   examples/web:
     dependencies:
       '@react-native-webview-rpc/web':
-        specifier: ^0.1.3
-        version: 0.1.3(comlink@4.4.1)(react@18.2.0)
+        specifier: workspace:*
+        version: link:../../packages/web
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1398,19 +1398,6 @@ packages:
     resolution: {integrity: sha512-647OSi6xBb8FbwFqX9zsJxOzu685AWtrOUWHfOkbKD+5LOpGORw+GQo0F9rWZnB68rLQyfKUZWJeaD00pGv5fw==}
     engines: {node: '>=18'}
     hasBin: true
-
-  '@react-native-webview-rpc/native@0.1.3':
-    resolution: {integrity: sha512-wJ+d7+r0Sd7iFNDXDY47J46IDNz0b7GFKlxZwjh/So2la4bf+m8uBFmeqbrl4ylXW9rYzbCDYU7r/N8B9HEmaw==}
-    peerDependencies:
-      comlink: '>=4.0.0'
-      react: '>=18.0.0'
-      react-native-webview: '>=13.0.0'
-
-  '@react-native-webview-rpc/web@0.1.3':
-    resolution: {integrity: sha512-f0ruQZIjv0+gNnTV82JcJbFeHq/42Ausj08IiXBxvDrGV5ahL2FBRN/P7jzca2uf2aJUMnx9tPO+EK0m7YNMDA==}
-    peerDependencies:
-      comlink: '>=4.0.0'
-      react: '>=18.0.0'
 
   '@react-native/assets-registry@0.73.1':
     resolution: {integrity: sha512-2FgAbU7uKM5SbbW9QptPPZx8N9Ke2L7bsHb+EhAanZjFZunA9PaYtyjUQ1s7HD+zDVqOQIvjkpXSv7Kejd2tqg==}
@@ -6221,17 +6208,6 @@ snapshots:
       - encoding
       - supports-color
       - utf-8-validate
-
-  '@react-native-webview-rpc/native@0.1.3(comlink@4.4.1)(react-native-webview@13.8.2(react-native@0.73.6(@babel/core@7.24.3)(@babel/preset-env@7.24.3(@babel/core@7.24.3))(react@18.2.0))(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      comlink: 4.4.1
-      react: 18.2.0
-      react-native-webview: 13.8.2(react-native@0.73.6(@babel/core@7.24.3)(@babel/preset-env@7.24.3(@babel/core@7.24.3))(react@18.2.0))(react@18.2.0)
-
-  '@react-native-webview-rpc/web@0.1.3(comlink@4.4.1)(react@18.2.0)':
-    dependencies:
-      comlink: 4.4.1
-      react: 18.2.0
 
   '@react-native/assets-registry@0.73.1': {}
 
