@@ -1,6 +1,6 @@
 {
   "name": "@react-native-webview-rpc/native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A type-safe RPC between React Native function and JavaScript inside WebView, powered by Comlink",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -8,10 +8,6 @@
   "files": [
     "./dist"
   ],
-  "scripts": {
-    "build": "tsup ./src",
-    "prepublish": "pnpm build"
-  },
   "keywords": [
     "react-native",
     "webview",
@@ -19,8 +15,16 @@
     "react",
     "typescript"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yukukotani/react-native-webview-rpc"
+  },
   "author": "Yuku Kotani (yukukotani@gmail.com)",
   "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsup ./src",
+    "prepublish": "pnpm build"
+  },
   "devDependencies": {
     "@types/react": "^18.2.69",
     "comlink": "^4.4.1",

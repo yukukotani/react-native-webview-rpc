@@ -1,6 +1,6 @@
 {
   "name": "react-native-webview-rpc",
-  "version": "0.1.3",
+  "version": "0.0.0",
   "description": "A type-safe RPC between React Native function and JavaScript inside WebView, powered by Comlink",
   "private": true,
   "scripts": {
