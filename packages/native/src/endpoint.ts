@@ -43,14 +43,14 @@ export function createWebViewRpcEndpoint(
         ) {
           return;
         }
-        throw Error(`No WebView instance`);
+        throw Error("Failed to return RPC response to WebView via postMessage");
       }
       console.debug("[webview:res]", data);
       const dataStr = JSON.stringify(data);
       return ref.current.injectJavaScript(`
-      console.debug('[webview:res]', ${dataStr});
-      document.dispatchEvent(new MessageEvent('ReactNativeWebViewCallback', { data: ${dataStr} }));
-    `);
+console.debug('[webview:res]', ${dataStr});
+document.dispatchEvent(new MessageEvent('ReactNativeWebViewCallback', { data: ${dataStr} }));
+`);
     },
     onMessage: (e) => {
       const data = JSON.parse(e.nativeEvent.data);
