@@ -2,7 +2,7 @@ import * as Comlink from "comlink";
 import { RefObject } from "react";
 import WebView, { WebViewMessageEvent } from "react-native-webview";
 
-export const SYMBOL_IGNORING_RPC_RESPONSE_ERROR = Symbol();
+export const SYMBOL_IGNORING_RPC_RESPONSE_ERROR: symbol = Symbol();
 
 export type WebViewEndpoint = Comlink.Endpoint & {
   /**
