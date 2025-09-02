@@ -7,10 +7,10 @@ import { WebViewEndpoint, createWebViewRpcEndpoint } from "./endpoint";
  * Returns a handler of RPC message from WebView.
  */
 export function useWebViewRpcHandler<Rpcs>(
-  webViewRef: RefObject<WebView>,
+  webViewRef: RefObject<WebView | null>,
   rpcs: Rpcs
 ) {
-  const endpointRef = useRef<WebViewEndpoint>();
+  const endpointRef = useRef<WebViewEndpoint>(undefined);
   const onMessage: WebViewProps["onMessage"] = useCallback(
     (e) => {
       endpointRef.current?.onMessage(e);

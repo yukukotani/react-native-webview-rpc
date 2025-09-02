@@ -2,10 +2,14 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "ESNext",
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "moduleResolution": "bundler",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "strictNullChecks": true
   }
 }

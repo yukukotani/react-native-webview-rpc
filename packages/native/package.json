@@ -26,10 +26,10 @@
     "prepublish": "pnpm build"
   },
   "devDependencies": {
-    "@types/react": "^18.2.69",
+    "@types/react": "^19.0.10",
     "comlink": "^4.4.1",
-    "react": "^18.2.0",
-    "react-native-webview": "^13.8.2"
+    "react": "^19.0.0",
+    "react-native-webview": "^13.13.5"
   },
   "peerDependencies": {
     "comlink": ">=4.0.0",
