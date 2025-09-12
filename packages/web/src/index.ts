@@ -1,2 +1,2 @@
-export { wrap } from "./wrap";
+export { wrap, safeWrap } from "./wrap";
 export { webViewRpcEndpoint } from "./endpoint";
